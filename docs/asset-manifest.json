@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/YourRepositoryName/static/css/main.cce4743a.css",
-    "main.js": "/YourRepositoryName/static/js/main.19120ea8.js",
-    "static/js/453.0a9a0de8.chunk.js": "/YourRepositoryName/static/js/453.0a9a0de8.chunk.js",
-    "index.html": "/YourRepositoryName/index.html",
-    "main.cce4743a.css.map": "/YourRepositoryName/static/css/main.cce4743a.css.map",
-    "main.19120ea8.js.map": "/YourRepositoryName/static/js/main.19120ea8.js.map",
-    "453.0a9a0de8.chunk.js.map": "/YourRepositoryName/static/js/453.0a9a0de8.chunk.js.map"
+    "main.css": "/shige-56/static/css/main.cce4743a.css",
+    "main.js": "/shige-56/static/js/main.19120ea8.js",
+    "static/js/453.0a9a0de8.chunk.js": "/shige-56/static/js/453.0a9a0de8.chunk.js",
+    "index.html": "/shige-56/index.html",
+    "main.cce4743a.css.map": "/shige-56/static/css/main.cce4743a.css.map",
+    "main.19120ea8.js.map": "/shige-56/static/js/main.19120ea8.js.map",
+    "453.0a9a0de8.chunk.js.map": "/shige-56/static/js/453.0a9a0de8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cce4743a.css",
