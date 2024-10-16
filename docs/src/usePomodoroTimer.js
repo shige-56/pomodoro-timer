@@ -6,15 +6,12 @@ function usePomodoroTimer(workTime, shortBreak, longBreak, maxCycles = 4) {
   const [isPaused, setIsPaused] = useState(false);   // 一時停止状態かどうか
   const [isBreak, setIsBreak] = useState(false);     // 休憩中かどうか
   const [cycleCount, setCycleCount] = useState(0);   // ポモドーロのサイクル数
+  const [isCompleted, setIsCompleted] = useState(false);  // ポモドーロの完了状態
 
-  // タイマーが作動していない場合、設定変更をリアルタイムで反映
+  // 設定が変更されたときにすぐに反映する
   useEffect(() => {
-    if (!isActive && !isBreak) {
-      setSeconds(workTime);
-    } else if (!isActive && isBreak && cycleCount % maxCycles === 0) {
-      setSeconds(longBreak);
-    } else if (!isActive && isBreak) {
-      setSeconds(shortBreak);
+    if (!isActive) {
+      setSeconds(isBreak ? (cycleCount + 1 === maxCycles ? longBreak : shortBreak) : workTime);
     }
   }, [workTime, shortBreak, longBreak, isActive, isBreak, cycleCount, maxCycles]);
 
@@ -31,13 +28,20 @@ function usePomodoroTimer(workTime, shortBreak, longBreak, maxCycles = 4) {
 
     if (seconds === 0) {
       clearInterval(interval);
+
       if (isBreak) {
-        setIsBreak(false);
+        setIsBreak(false);  // 休憩終了、作業に戻る
         setSeconds(workTime);
-        setCycleCount((prevCount) => prevCount + 1);
+        if (cycleCount + 1 === maxCycles) {
+          setIsCompleted(true);  // 最大サイクルに達したら完了フラグをセット
+          setIsActive(false);    // タイマーを終了
+        } else {
+          setCycleCount((prevCount) => prevCount + 1);
+        }
       } else {
-        setIsBreak(true);
-        setSeconds(cycleCount % maxCycles === 0 ? longBreak : shortBreak);
+        setIsBreak(true);  // 作業終了、休憩に入る
+        const isFinalCycle = cycleCount + 1 === maxCycles;
+        setSeconds(isFinalCycle ? longBreak : shortBreak);  // 最後のサイクルなら長い休憩
       }
     }
 
@@ -58,9 +62,10 @@ function usePomodoroTimer(workTime, shortBreak, longBreak, maxCycles = 4) {
     setIsBreak(false);
     setSeconds(workTime);
     setCycleCount(0);
+    setIsCompleted(false);  // タイマーの完了状態をリセット
   };
 
-  return { seconds, isActive, isPaused, isBreak, cycleCount, toggle, reset };
+  return { seconds, isActive, isPaused, isBreak, cycleCount, isCompleted, toggle, reset };
 }
 
 export default usePomodoroTimer;

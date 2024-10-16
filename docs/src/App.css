@@ -153,6 +153,7 @@ button:disabled {
   margin-bottom: 5px;
 }
 
+/* 入力フォームのスタイル修正 */
 .setting-group input {
   width: 60px;
   padding: 5px;
@@ -160,12 +161,16 @@ button:disabled {
   border: 1px solid #ddd;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: #000;  /* テキストカラーを黒に設定 */
+  background-color: #fff;  /* 背景を白に設定 */
 }
 
 .setting-group input:disabled {
-  background-color: #e0e0e0;
+  background-color: #f0f0f0;  /* 無効時の背景色を薄いグレーに設定 */
+  color: #888;  /* 無効時のテキストカラーをやや薄い色に設定 */
   cursor: not-allowed;
 }
+
 
 /* ステータスアニメーションを一時停止 */
 body.paused {
