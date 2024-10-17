@@ -227,3 +227,34 @@ body.paused {
   transition: stroke-dashoffset 1s linear; /* スムーズなアニメーション */
   stroke-linecap: round; /* 角を丸くする */
 }
+
+/* 作業中の背景グラデーション */
+body.work-phase {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  animation: gradientSlide 120s ease infinite;
+}
+
+/* 短い休憩中の背景グラデーション */
+body.short-break-phase {
+  background: linear-gradient(135deg, #a8edea, #fccb90);
+  animation: gradientSlide 120s ease infinite;
+}
+
+/* 長い休憩中の背景グラデーション */
+body.long-break-phase {
+  background: linear-gradient(135deg, #ff9aa2, #ffccf9);
+  animation: gradientSlide 120s ease infinite;
+}
+
+/* グラデーションのスライドアニメーション */
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
