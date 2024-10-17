@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# ポモドーロタイマー ⏲️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+作業時間と休憩時間を管理するためのシンプルなポモドーロタイマーです。  
+作業フェーズ、短い休憩、長い休憩で**背景が自動的に切り替わる**のが特徴です。  
+ユーザーが生産性を高め、効果的に時間を管理するために最適なツールです。
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 デモ
+- [ポモドーロタイマー - GitHub Pages](https://username.github.io/pomodoro-timer)  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📸 スクリーンショット
+**アプリの初期画面**  
+![初期画面](./screenshot1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**作業中の画面**  
+![作業中の画面](./screenshot2.png)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 機能
+- 作業時間、短い休憩、長い休憩の**時間設定が可能**
+- **背景グラデーション**がフェーズごとに切り替わり、視覚的なフィードバックを提供
+- 作業終了、短い休憩終了、ポモドーロの完了時に**音声で**でお知らせ
+- 作業完了後に**ポップアップ通知**で知らせる
+- 一時停止、再開、リセット機能付き
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 使用技術
+- **React.js**：ユーザーインターフェース構築
+- **CSSアニメーション**：背景グラデーションの切り替え
+- **JavaScript Hooks**：タイマーと状態管理
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 インストールと実行方法
+以下の手順でローカル環境にセットアップし、実行できます。
 
-### `npm run eject`
+```bash
+# リポジトリをクローン
+git clone https://github.com/username/pomodoro-timer.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# ディレクトリに移動
+cd pomodoro-timer
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 必要なパッケージをインストール
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# アプリを起動
+npm start
