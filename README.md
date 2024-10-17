@@ -7,7 +7,7 @@
 ---
 
 ## 🚀 デモ
-- [ポモドーロタイマー - GitHub Pages](https://username.github.io/pomodoro-timer)  
+- [ポモドーロタイマー - GitHub Pages](https://shige-56.github.io/pomodoro-timer)  
 
 ---
 
@@ -41,7 +41,7 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/username/pomodoro-timer.git
+git clone https://github.com/shige-56/pomodoro-timer.git
 
 # ディレクトリに移動
 cd pomodoro-timer
