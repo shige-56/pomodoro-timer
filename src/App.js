@@ -69,14 +69,14 @@ function App() {
         isActive={isActive}
       />
 
-      {showPopup && (
-        <div className="popup" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000, backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <div className="popup-content" style={{ backgroundColor: '#fff', padding: '20px', borderRadius: '10px', textAlign: 'center' }}>
-            <h2>ポモドローを達成しました。おめでとうございます！</h2>
-            <button onClick={closePopup}>OK</button>
-          </div>
-        </div>
-      )}
+{showPopup && (
+  <div className="popup-overlay">
+    <div className="popup-content">
+      <h2>ポモドローを達成しました。<br></br>お疲れ様でした！🎉</h2>
+      <button onClick={closePopup}>OK</button>
+    </div>
+  </div>
+)}
     </div>
   );
 }

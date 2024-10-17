@@ -33,6 +33,7 @@ function TimerProgress({ progress }) {
           transform: 'rotate(-90deg)',
           transformOrigin: '140px 140px',
           strokeLinecap: 'round',
+          transition: 'stroke-dashoffset 1s linear', // スムーズなアニメーション
         }}
       />
     </svg>

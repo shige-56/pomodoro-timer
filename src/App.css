@@ -176,3 +176,54 @@ button:disabled {
 body.paused {
   animation-play-state: paused;
 }
+
+/* ポップアップの全体を覆うオーバーレイ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 背景を半透明に */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ポップアップの内容 */
+.popup-content {
+  background-color: rgba(255, 255, 255, 0.9); /* 透明度の高い白 */
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 柔らかい影 */
+  backdrop-filter: blur(10px); /* 背景のぼかし効果 */
+}
+
+/* ポップアップ内のボタン */
+.popup-content button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+  background-color: #45a049;
+}
+
+/* 円形進捗バーのスタイル */
+.progress-ring {
+  display: block;
+  margin: 0 auto;
+}
+
+.progress-ring__circle {
+  transition: stroke-dashoffset 1s linear; /* スムーズなアニメーション */
+  stroke-linecap: round; /* 角を丸くする */
+}
